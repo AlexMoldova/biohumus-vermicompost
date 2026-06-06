@@ -43,9 +43,10 @@ body{background:var(--bg);color:var(--text);font-family:Nunito,sans-serif;font-w
 .hero-tag{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;background:#fff;border:1px solid #e0d8d0;border-radius:100px;font-weight:600;font-size:12px;color:var(--green);letter-spacing:.06em;margin-bottom:24px}
 .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--green-light);animation:pulse 2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(125,181,0,.6)}70%{box-shadow:0 0 0 12px rgba(125,181,0,0)}100%{box-shadow:0 0 0 0 rgba(125,181,0,0)}}
-.hero h1{font-family:var(--font-display);font-weight:900;font-size:clamp(40px,6vw,88px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-family:var(--font-display);font-weight:900;font-size:clamp(40px,6vw,88px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:20px;width:100%}
+.hero h1 .green{word-break:break-word;overflow-wrap:break-word;white-space:normal;width:100%;display:inline-block}
 .hero h1 .brown{color:var(--brown);display:inline-block}
-.hero h1 .green{color:var(--green);display:inline-block;letter-spacing:.15em}
+.hero h1 .green{color:var(--green);display:inline-block;letter-spacing:.15em;word-break:break-word;overflow-wrap:break-word;white-space:normal}
 .hero h1 .sep{color:var(--green-light);margin:0 4px}
 .hero p.lead{font-size:17px;color:#555;max-width:520px;margin-bottom:32px;line-height:1.6}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
@@ -68,6 +69,7 @@ body{background:var(--bg);color:var(--text);font-family:Nunito,sans-serif;font-w
 .hero-spec-label{font-size:11px;color:#888;font-weight:600}
 @media(max-width:768px){
 .hero{grid-template-columns:1fr;padding:100px 20px 50px;gap:40px;min-height:auto}
+.hero h1{font-size:clamp(2rem,8vw,5rem);word-break:break-word;overflow-wrap:break-word;white-space:normal;width:100%}
 .hero-stats{max-width:100%}
 .hero-visual{margin:0 -8px}
 .hero-spec{bottom:-18px;left:-8px}
@@ -107,7 +109,7 @@ body{background:var(--bg);color:var(--text);font-family:Nunito,sans-serif;font-w
 .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .contact-info h2{margin-bottom:12px}
 .contact-info p{color:#555;margin-bottom:24px}
-.contact-phone{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:24px;color:var(--green);text-decoration:none;margin-bottom:12px;transition:color .2s}
+.contact-phone{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:24px;color:var(--green);text-decoration:none;margin-bottom:12px;transition:color .2s;white-space:nowrap}
 .contact-phone:hover{color:var(--green-light)}
 .contact-form{background:#fff;border-radius:16px;padding:36px}
 .form-group{margin-bottom:18px}
@@ -117,7 +119,7 @@ body{background:var(--bg);color:var(--text);font-family:Nunito,sans-serif;font-w
 .form-group textarea{height:100px;resize:vertical}
 .form-submit{width:100%;padding:14px;background:var(--green);color:#fff;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;transition:background .2s,transform .2s;font-family:var(--font-body)}
 .form-submit:hover{background:var(--green-light);transform:translateY(-2px)}
-@media(max-width:768px){.contact-wrap{grid-template-columns:1fr}.contact-form{padding:24px}}
+@media(max-width:768px){.contact-wrap{grid-template-columns:1fr}.contact-form{padding:24px}.contact-phone{white-space:nowrap;font-size:clamp(1.2rem,5vw,2rem)}}
 .footer{padding:40px 0 24px;background:var(--brown);color:rgba(255,255,255,.8)}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:32px}
 .footer h4{font-family:var(--font-display);font-weight:700;font-size:14px;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.06em}
@@ -137,7 +139,7 @@ body{background:var(--bg);color:var(--text);font-family:Nunito,sans-serif;font-w
 .float-telegram{background:#0088CC !important}
 .float-phone{background:var(--green) !important}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:768px){.float-btn{width:48px !important;height:48px !important;max-width:60px !important}.float-btn svg{width:24px !important;height:24px !important}.float-btns{bottom:16px;right:16px;gap:8px}}
+@media(max-width:768px){.float-btn{width:44px !important;height:44px !important;max-width:44px !important}.float-btn svg{width:24px !important;height:24px !important}.float-btns{bottom:16px !important;right:8px !important;gap:8px !important}}
 </style>
 </head>
 <body>
